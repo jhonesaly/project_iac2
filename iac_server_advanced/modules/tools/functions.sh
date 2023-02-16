@@ -7,11 +7,3 @@ function update_server() {
     apt-get update
     apt-get upgrade -y
 }
-
-
-## 2 - Instala softwares necessários
-
-apt-get install unzip -y
-
-apt-get install apache2 -y
-apt-get install samba -y
