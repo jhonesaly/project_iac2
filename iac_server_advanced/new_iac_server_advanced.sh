@@ -7,6 +7,27 @@ printf "\nEm caso de dúvida, consulte a documentação disponível em <https://
 
 ## 1 - 
 
+## Atualiza servidor
+
+while true; do
+
+    read -n 1 -p "Deseja atualizar servidor? [y/n] " ans_a1
+
+    if [ $ans_a1 = "y" ]; then
+        ./modules/exclude_past_gud.sh
+        break
+
+    elif [ $ans_a1 = "n" ]; then
+        break
+
+    else
+        printf "\nDigite um comando válido.\n"
+        continue
+
+    fi
+
+done
+
 ## Cria servidor de arquivos
 
 ## Cria servidor de web
