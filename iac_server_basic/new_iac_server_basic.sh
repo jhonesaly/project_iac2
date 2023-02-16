@@ -12,26 +12,25 @@ printf "\nAtualizando o servidor...\n"
 apt-get update
 apt-get upgrade -y
 
-## 2 - Instala software que permite máquina funcionar como servidor web
+## 2 - Instala softwares necessários
 
 apt-get install apache2 -y
 apt-get install unzip -y
 
-## 2 - Baixa arquivos do repositório
+## 3 - Baixa arquivos e descompacta arquivos do repositório
 
 printf "\nBaixando e copiando os arquivos da aplicação...\n"
 
 cd /tmp
 wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
 
-## 3 - Descompacta arquivo baixado
-
 unzip main.zip
 
-## 4 - muda para pasta criada pela descompactação
+## 4 - Copia arquivos do repositório na pasta do servidor
 
 cd linux-site-dio-main
 cp -R * /var/www/html/
-#  - Fim
+
+## 5 - Fim
 
 printf "\nFinalizado.\n"
