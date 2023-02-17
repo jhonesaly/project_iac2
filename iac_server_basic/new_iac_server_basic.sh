@@ -9,8 +9,9 @@ printf "\nEm caso de dúvida, consulte a documentação disponível em <https://
 
 printf "\nAtualizando o servidor...\n"
 
-apt-get update
+apt-get update -y
 apt-get upgrade -y
+systemctl daemon-reexec
 
 ## 2 - Instala softwares necessários
 
