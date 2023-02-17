@@ -6,7 +6,7 @@ printf "\nBaixando softwares necessários...\n"
 
 apt-get install apache2 -y
 apt-get install unzip -y
-apt autoremove
+apt-get autoremove -y
 
 ## 1 - Baixa arquivos e descompacta arquivos do repositório
 
