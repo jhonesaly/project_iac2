@@ -6,6 +6,7 @@ printf "\nBaixando softwares necessários...\n"
 
 apt-get install apache2 -y
 apt-get install unzip -y
+apt autoremove
 
 ## 1 - Baixa arquivos e descompacta arquivos do repositório
 
@@ -15,7 +16,7 @@ printf "\nBaixando e copiando os arquivos da aplicação...\n"
 
 cd /tmp
 
-wget ans_w1 -O my_app.zip
+wget ${ans_w1} -O my_app.zip
 unzip my_app.zip -d my_app_folder
 
 ## 2 - Copia arquivos do repositório na pasta do servidor
