@@ -9,8 +9,9 @@ printf "\nEm caso de dúvida, consulte a documentação disponível em <https://
 
 printf "\nAtualizando o servidor...\n"
 
+export DEBIAN_FRONTEND=noninteractive
 apt-get update -y
-apt-get upgrade -y
+apt-get upgrade -y -qq
 systemctl daemon-reexec
 
 ## 2 - Instala softwares necessários

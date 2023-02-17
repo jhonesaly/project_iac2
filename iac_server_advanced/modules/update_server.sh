@@ -10,5 +10,6 @@
 
 printf "\nAtualizando o servidor...\n"
 
-apt-get update
-apt-get upgrade -y
+apt-get update -y
+apt-get upgrade -y -qq
+systemctl daemon-reexec
