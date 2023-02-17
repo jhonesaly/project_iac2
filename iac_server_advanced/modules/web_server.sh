@@ -14,7 +14,9 @@ printf "\nBaixando e copiando os arquivos da aplicação...\n"
 
 cd /tmp
 
-wget ${ans_w1} -O my_app.zip
+ans_w1="$1"
+
+wget "$ans_w1" -O my_app.zip
 unzip my_app.zip -d my_app_folder
 
 ## 2 - Copia arquivos do repositório na pasta do servidor
