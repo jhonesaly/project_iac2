@@ -7,15 +7,35 @@ printf "\nEm caso de dúvida, consulte a documentação disponível em <https://
 
 ## 1 - Atualiza servidor
 
-. /modules
-
 while true; do
 
     read -n 1 -p "Deseja atualizar servidor? [y/n] " ans_a1
     ans_a1=${ans_a1:-y}
 
     if [ $ans_a1 = "y" ]; then
-        update_server
+        ./modules/web_server.sh 
+        break
+
+    elif [ $ans_a1 = "n" ]; then
+        break
+
+    else
+        printf "\nDigite um comando válido.\n"
+        continue
+
+    fi
+
+done
+
+## Cria servidor de web
+
+while true; do
+
+    read -n 1 -p "Deseja criar servidor web? [y/n] " ans_a1
+    ans_a1=${ans_a1:-y}
+
+    if [ $ans_a1 = "y" ]; then
+        ./modules/web_server.sh        
         break
 
     elif [ $ans_a1 = "n" ]; then
@@ -30,8 +50,6 @@ while true; do
 done
 
 ## Cria servidor de arquivos
-
-## Cria servidor de web
 
 ## Cria servidor de banco de dados
 
