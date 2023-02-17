@@ -10,8 +10,6 @@ apt-get autoremove -y
 
 ## 1 - Baixa arquivos e descompacta arquivos do repositório
 
-read -p "coloque o endereço do repositório para fazer o download: " ans_w1
-
 printf "\nBaixando e copiando os arquivos da aplicação...\n"
 
 cd /tmp
