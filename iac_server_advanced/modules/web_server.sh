@@ -16,6 +16,8 @@ cd /tmp
 
 ans_w1="$1"
 
+# read -p "coloque o endereço do repositório para fazer o download: " ans_w1
+
 wget "$ans_w1" -O my_app.zip
 unzip my_app.zip -d my_app_folder
 
