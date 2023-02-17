@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ./tools/functions.sh
+
 ## 0 - Saudação
 
 printf "\nIniciando protocolo new_iac_server_advanced...\n"
