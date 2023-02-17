@@ -16,13 +16,8 @@ while true; do
     if [ $question_number -eq 1 ]; then
         read -n 1 -p "Deseja atualizar servidor? [y/n] " ans_a1
         printf "\n...\n"
-        if [ "$ans_a1" != "y" ] && [ "$ans_a1" != "n" ]; then
-            printf "\nDigite um comando válido.\n"
-            continue
-        else
-            question_number=2
-            continue
-        fi
+        
+        check_answer "$ans_a1" || continue
 
     elif [ $question_number -eq 2 ]; then
         read -n 1 -p "Deseja criar um servidor web? [y/n] " ans_a2
@@ -30,14 +25,9 @@ while true; do
         
         if [ $ans_a2 = "y" ]; then
             read -p "coloque o endereço do repositório para fazer o download: " ans_w1
-
-        elif [ "$ans_a2" != "y" ] && [ "$ans_a2" != "n" ]; then
-            printf "\nDigite um comando válido.\n"
-            continue
-        else
-            question_number=3
-            continue
         fi
+        
+        check_answer "$ans_a2" || continue
 
     fi
 
