@@ -28,19 +28,28 @@ while true; do
         read -n 1 -p "Deseja criar um servidor web? [y/n] " ans_a2
         printf "\n...\n"
         
-        if [ $ans_a2 = "y" ]; then
-            read -p "coloque o endereço do repositório para fazer o download: " ans_w1
-        fi
-        
         if [ "$ans_a2" != "y" ] && [ "$ans_a2" != "n" ]; then
             printf "\nDigite um comando válido.\n"
-
+        
         else
-             question_number=3
-             continue
+            question_number=3
+            continue
         fi
 
-
+        read -n 1 -p "Deseja fazer o download de um repositório com o conteúdo do site? [y/n] " ans_w1
+        printf "\n...\n"
+        
+        if [ "$ans_w1" != "y" ] && [ "$ans_w1" != "n" ]; then
+            printf "\nDigite um comando válido.\n"
+            question_number=2
+            continue
+        
+        else
+            if [ $ans_w1 = "y" ]; then
+            read -p "coloque o endereço do repositório para fazer o download: " ans_w2
+            continue
+            fi
+        fi
     fi
 
     printf "\nConfigurando...\n"
@@ -51,13 +60,13 @@ done
 ## 1 Atualiza servidor
 
 if [ $ans_a1 = "y" ]; then
-    ./modules/update_server.sh "$ans_w1"
+    ./modules/update_server.sh 
 fi
 
 ## 2 Cria servidor web
 
 if [ $ans_a2 = "y" ]; then
-    ./modules/web_server.sh        
+    ./modules/web_server.sh "$ans_w1" "$ans_w2"   
 fi
 
 ## Cria servidor de arquivos
