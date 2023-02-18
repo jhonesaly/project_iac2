@@ -4,7 +4,7 @@ Nessa pasta está contida o script que seguirá estritamente aquilo que foi prop
 
 Para tal, basta executar o script "new_iac_basic.sh".
 
-O script "new_iac_server_basic.sh"é um script de automação de infraestrutura que atualiza o servidor, instala softwares necessários, baixa e copia os arquivos da aplicação para o servidor. O script pode ser utilizado em um ambiente de desenvolvimento ou produção para automatizar o processo de configuração do servidor.
+O script "new_iac_server_basic.sh" é um script de automação de infraestrutura que atualiza o servidor, instala softwares necessários, baixa e copia os arquivos da aplicação para o servidor. O script pode ser utilizado em um ambiente de desenvolvimento ou produção para automatizar o processo de configuração do servidor.
 
 ------
 # Explicando Script new_iac_server_basic

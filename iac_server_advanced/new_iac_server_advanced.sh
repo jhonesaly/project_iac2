@@ -9,7 +9,7 @@ question_number=1
 
 while true; do
 
-## 0 - Configurações
+## 1 - Configurações
 
     if [ $question_number -eq 1 ]; then
         read -n 1 -p "Deseja atualizar servidor? [y/n] " ans_a1
@@ -59,13 +59,13 @@ while true; do
 
 done
 
-## 1 Atualiza servidor
+## 2 - Atualiza servidor
 
 if [ $ans_a1 = "y" ]; then
     ./modules/update_server.sh 
 fi
 
-## 2 Cria servidor web
+## 3 - Cria servidor web
 
 if [ $ans_a2 = "y" ]; then
     ./modules/web_server.sh "$ans_w1" "$ans_w2" 
@@ -74,9 +74,5 @@ if [ $ans_a2 = "y" ]; then
 
 fi
 
-## Cria servidor de arquivos
-
-## Cria servidor de banco de dados
-
-##  - Fim
+## 4 - Fim
 printf "\nFinalizado.\n"

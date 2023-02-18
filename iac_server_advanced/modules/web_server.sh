@@ -29,14 +29,3 @@ if [ "$ans_w1" = "y" ]; then
     cp -R "$app_folder_name"/* /var/www/html/
     
 fi
-
-
-# read -p "coloque o endereço do repositório para fazer o download: " ans_w1
-
-
-
-
-
-
-## 2 - Copia arquivos do repositório na pasta do servidor
-
