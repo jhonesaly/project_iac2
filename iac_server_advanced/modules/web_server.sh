@@ -7,7 +7,9 @@ ans_w2="$2"
 
 printf "\nBaixando softwares necessários...\n"
 
-apt-get install apache2 -y
+export DEBIAN_FRONTEND=noninteractive
+apt-get install apache2 -y -qq
+systemctl daemon-reexec
 
 ## 1 - Baixa arquivos e descompacta arquivos do repositório
 

@@ -34,24 +34,24 @@ while true; do
             continue
             
         else
+            if [ "$ans_a2" = "y" ]; then
+                read -n 1 -p "Deseja fazer o download de um repositório com o conteúdo do site? [y/n] " ans_w1
+                printf "\n...\n"
+
+                if [ "$ans_w1" != "y" ] && [ "$ans_w1" != "n" ]; then
+                    printf "\nDigite um comando válido.\n"
+                    continue
+                
+                elif [ $ans_w1 = "y" ]; then
+                    read -p "coloque o endereço do repositório para fazer o download: " ans_w2
+                fi
+            fi
+            
             question_number=3
             continue
         fi
 
-        read -n 1 -p "Deseja fazer o download de um repositório com o conteúdo do site? [y/n] " ans_w1
-        printf "\n...\n"
-        
-        if [ "$ans_w1" != "y" ] && [ "$ans_w1" != "n" ]; then
-            printf "\nDigite um comando válido.\n"
-            question_number=2
-            continue
-        
-        else
-            if [ $ans_w1 = "y" ]; then
-            read -p "coloque o endereço do repositório para fazer o download: " ans_w2
-            continue
-            fi
-        fi
+
     fi
 
     printf "\nConfigurando...\n"
