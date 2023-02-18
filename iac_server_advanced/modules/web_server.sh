@@ -8,14 +8,14 @@ ans_w2="$2"
 printf "\nBaixando softwares necessários...\n"
 
 apt-get install apache2 -y
-apt-get install unzip -y
-apt-get autoremove -y
 
 ## 1 - Baixa arquivos e descompacta arquivos do repositório
 
 if [ "$ans_w1" = "y" ]; then
     printf "\nBaixando e copiando os arquivos da aplicação...\n"
     
+    apt-get install unzip -y
+
     cd /tmp
     wget "$ans_w2" -O my_app.zip
     unzip my_app.zip -d my_app_folder
