@@ -5,35 +5,74 @@
 printf "\nIniciando protocolo new_iac_server_advanced...\n"
 printf "\nEm caso de dúvida, consulte a documentação disponível em <https://github.com/jhonesaly/project_iac2>\n"
 
-## 1 - Atualiza servidor
-
-. /modules
+question_number=1
 
 while true; do
 
-    read -n 1 -p "Deseja atualizar servidor? [y/n] " ans_a1
-    ans_a1=${ans_a1:-y}
+## 1 - Configurações
 
-    if [ $ans_a1 = "y" ]; then
-        update_server
-        break
+    if [ $question_number -eq 1 ]; then
+        read -n 1 -p "Deseja atualizar servidor? [y/n] " ans_a1
+        printf "\n...\n"
+        
+        if [ "$ans_a1" != "y" ] && [ "$ans_a1" != "n" ]; then
+            printf "\nDigite um comando válido.\n"
+            continue
 
-    elif [ $ans_a1 = "n" ]; then
-        break
+        else
+             question_number=2
+             continue
+        fi
 
-    else
-        printf "\nDigite um comando válido.\n"
-        continue
+
+    elif [ $question_number -eq 2 ]; then
+        read -n 1 -p "Deseja criar um servidor web? [y/n] " ans_a2
+        printf "\n...\n"
+        
+        if [ "$ans_a2" != "y" ] && [ "$ans_a2" != "n" ]; then
+            printf "\nDigite um comando válido.\n"
+            continue
+            
+        else
+            if [ "$ans_a2" = "y" ]; then
+                read -n 1 -p "Deseja fazer o download de um repositório com o conteúdo do site? [y/n] " ans_w1
+                printf "\n...\n"
+
+                if [ "$ans_w1" != "y" ] && [ "$ans_w1" != "n" ]; then
+                    printf "\nDigite um comando válido.\n"
+                    continue
+                
+                elif [ $ans_w1 = "y" ]; then
+                    read -p "coloque o endereço do repositório para fazer o download: " ans_w2
+                fi
+            fi
+            
+            question_number=3
+            continue
+        fi
+
 
     fi
 
+    printf "\nConfigurando...\n"
+    break
+
 done
 
-## Cria servidor de arquivos
+## 2 - Atualiza servidor
 
-## Cria servidor de web
+if [ $ans_a1 = "y" ]; then
+    ./modules/update_server.sh 
+fi
 
-## Cria servidor de banco de dados
+## 3 - Cria servidor web
 
-##  - Fim
+if [ $ans_a2 = "y" ]; then
+    ./modules/web_server.sh "$ans_w1" "$ans_w2" 
+    printf "\nPara acessar o conteúdo do servidor web, digite no browser o IP da máquina que é:\n" 
+    hostname -I
+
+fi
+
+## 4 - Fim
 printf "\nFinalizado.\n"

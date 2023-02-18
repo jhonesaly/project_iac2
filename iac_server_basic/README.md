@@ -4,30 +4,19 @@ Nessa pasta está contida o script que seguirá estritamente aquilo que foi prop
 
 Para tal, basta executar o script "new_iac_basic.sh".
 
-Esse script é um arquivo de script Bash que tem como objetivo automatizar a criação de diretórios, grupos de usuários e permissões em um sistema Linux de maneira simples conforme pedido.
+O script "new_iac_server_basic.sh" é um script de automação de infraestrutura que atualiza o servidor, instala softwares necessários, baixa e copia os arquivos da aplicação para o servidor. O script pode ser utilizado em um ambiente de desenvolvimento ou produção para automatizar o processo de configuração do servidor.
 
 ------
 # Explicando Script new_iac_server_basic
 
-Em 0, o script começa 
+Em 0, o script começa com saudações e instruções para o usuário.
 
-Por fim, em .
+Em 1, o script atualiza o servidor executando os comandos "apt-get update", "apt-get upgrade" e "systemctl daemon-reexec". O comando "export DEBIAN_FRONTEND=noninteractive" é utilizado para definir o modo "noninteractive", evitando que o sistema solicite confirmações durante a atualização.
 
-------
-# Output do script:
+Em 2, o script instala o Apache2 e o unzip.
 
-Prompt:
+Em 3, o script baixa um arquivo zip contendo os arquivos da aplicação a partir do repositório do GitHub e descompacta esses arquivos.
 
-![Prompt Basic](../images/prompt_basic.png)
+Em 4, o script copia os arquivos da aplicação descompactados para a pasta "/var/www/html/" do servidor.
 
-Pastas:
-
-![Directories Basic](../images/directories_basic.png)
-
-Usuários:
-
-![Users Basic](../images/users_basic.png)
-
-Grupos:
-
-![Groups Basic](../images/groups_basic.png)
+Em 5, o script finaliza com uma mensagem indicando que o processo foi concluído.
