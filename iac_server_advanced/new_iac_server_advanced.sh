@@ -68,7 +68,10 @@ fi
 ## 2 Cria servidor web
 
 if [ $ans_a2 = "y" ]; then
-    ./modules/web_server.sh "$ans_w1" "$ans_w2"   
+    ./modules/web_server.sh "$ans_w1" "$ans_w2" 
+    printf "\nPara acessar o conteúdo do servidor web, digite no browser o IP da máquina é:\n" 
+    hostname -I
+
 fi
 
 ## Cria servidor de arquivos
