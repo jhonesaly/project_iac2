@@ -2,6 +2,8 @@
 
 Nessa pasta está contida o script avançado, que utiliza lógica para permitir a generalização do script básico para qualquer caso semelhante.
 
+Tudo isso utilizando uma estrutura modularizada que permite maior flexibilidade e mais implementações no futuro.
+
 Para tal, basta executar o script "new_iac_server_advanced.sh".
 
 O script "new_iac_server_advanced.sh" é responsável por conduzir o usuário por um conjunto de perguntas iniciais que ajudarão a configurar o servidor.

@@ -44,7 +44,7 @@ Dentro da respectiva pasta há um outro README.md que explica detalhadamente o q
 
 Script avançado, que utiliza lógica para permitir a generalização do script básico, permitindo que seja criado quaisquer pastas, usuários e grupos direto na linha de comando de maneira muito mais simplificada. 
 
-Além disso, também é implementado o algoritmo que permite a exclusão de todas as pastas, grupos e usuários anteriores, se for de interesse do administrador. 
+Nessa pasta está contida o script avançado, que utiliza lógica para permitir a generalização do script básico para qualquer caso semelhante.
 
 Tudo isso utilizando uma estrutura modularizada que permite maior flexibilidade e mais implementações no futuro.
 
@@ -55,7 +55,20 @@ Dentro da respectiva pasta há um outro README.md que explica detalhadamente o q
 
 ## Server
 
-...
+Um servidor, em informática, é um computador ou um sistema de computação que fornece serviços para outros dispositivos e programas, conhecidos como clientes. Esses serviços podem ser diversos, incluindo armazenamento e gerenciamento de arquivos, acesso a recursos de rede, hospedagem de sites e aplicativos, processamento de dados, entre outros. Os servidores são projetados para serem confiáveis, seguros e escaláveis, para lidar com grandes volumes de solicitações de clientes simultâneas. Eles geralmente operam em sistemas operacionais de servidor específicos, como o Windows Server ou o Linux, e podem ser executados em hardware dedicado ou em nuvem.
+
+## Web Server
+
+Um web server é um software de servidor responsável por atender solicitações de clientes (navegadores da web) e entregar conteúdo web, como páginas HTML, imagens, arquivos de áudio e vídeo. Ele é responsável por receber as solicitações dos clientes por meio do protocolo HTTP, processar a solicitação e retornar a resposta apropriada.
+
+O web server pode executar em diferentes sistemas operacionais, como Windows, Linux e Mac OS X. Ele é usado por empresas e organizações para hospedar seus sites na internet, bem como por desenvolvedores que desejam criar e testar aplicativos web em seus computadores locais. Alguns exemplos de servidores web populares são o Apache, o Nginx e o Microsoft IIS.
+
+## Apache
+
+O Apache HTTP Server, mais conhecido como Apache, é um servidor web de código aberto, gratuito e multiplataforma, mantido pela Apache Software Foundation. Ele foi lançado em 1995 e é um dos servidores web mais populares e amplamente usados no mundo, com mais de 50% de participação no mercado de servidores web.
+
+O Apache é conhecido por sua estabilidade, segurança, flexibilidade e extensibilidade, suportando várias tecnologias e linguagens de programação, como PHP, Perl, Python e Ruby. Ele é executado em vários sistemas operacionais, incluindo Linux, Unix, Windows, macOS e outros. O servidor Apache é altamente configurável e pode ser personalizado para atender às necessidades específicas de diferentes aplicativos e sites da web. Ele é amplamente utilizado para hospedar sites, aplicativos da web, serviços web e outras soluções de software baseadas na web.
+
 
 ------
 # Montando na sua máquina
@@ -64,7 +77,40 @@ Leia as observações (próxima seção) antes de seguir com a montagem.
 
 Para utilizar os scripts na sua própria máquina, você pode fazer o seguinte:
 
-0 - 
+0 - Logue como super usuário, isso facilitará o processo da criação da infraestrutura. Ao encerrar, deslogue do root por questões de segurança.
+
+    > su
+    > Password:
+    #> 
+
+1 - Vá para a raiz e, caso ainda não tenha uma pasta para receber o conteúdo, crie uma (ex: downloads)
+
+    > cd /
+    > mkdir downloads
+    > cd downloads
+
+2 - Caso sua máquina não tenha o apt unzip, o instale por meio de:
+
+    > apt-get install unzip
+
+3 - Faça o download dos arquivos necessários no GitHub:
+
+    > wget https://github.com/jhonesaly/project_iac2/archive/refs/heads/main.zip
+
+4 - Descompacte o arquivo baixado.
+
+    > unzip main.zip
+
+5 - Atribua a possibilidade de ler, editar e executar os arquivos na pasta extraída:
+
+    > chmod -R 771 project_iac2-main
+
+6 - Pronto, os scripts estão aptos a serem excutados. Escolha se quer executar o básico ou avançado, entre na pasta e execute o respectivo script. Por exemplo:
+
+    > cd project_iac2-main
+    > cd iac_server_basic
+    > ./new_iac_server_basic.sh
+    
 
 ------
 # Observações

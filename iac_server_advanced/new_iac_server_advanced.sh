@@ -69,7 +69,7 @@ fi
 
 if [ $ans_a2 = "y" ]; then
     ./modules/web_server.sh "$ans_w1" "$ans_w2" 
-    printf "\nPara acessar o conteúdo do servidor web, digite no browser o IP da máquina é:\n" 
+    printf "\nPara acessar o conteúdo do servidor web, digite no browser o IP da máquina que é:\n" 
     hostname -I
 
 fi
