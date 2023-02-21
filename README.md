@@ -42,9 +42,7 @@ Dentro da respectiva pasta há um outro README.md que explica detalhadamente o q
 
 ## advanced
 
-Script avançado, que utiliza lógica para permitir a generalização do script básico, permitindo que qualquer ação seja opcional e que que o site possa ser baixado de qualquer repositório no github. 
-
-Nessa pasta está contida o script avançado, que utiliza lógica para permitir a generalização do script básico para qualquer caso semelhante.
+Nessa pasta está contida o script avançado, que utiliza lógica para permitir a generalização do script básico para qualquer caso semelhante, permitindo que qualquer ação seja opcional e que o site possa ser baixado de qualquer repositório no github. 
 
 Tudo isso utilizando uma estrutura modularizada que permite maior flexibilidade e mais implementações no futuro.
 
