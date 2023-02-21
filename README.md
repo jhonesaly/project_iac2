@@ -6,8 +6,8 @@
     - [Objetivos do Projeto](#Objetivos-do-Projeto)
     - [Requerimentos do Projeto](#Requerimentos-do-Projeto)
 - [Organização do Repositório](#organização-do-repositório)
-    - [iac_server_basic](#iac_server_basic)
-    - [iac_server_advanced](#iac_server_advanced)
+    - [basic](#basic)
+    - [advanced](#advanced)
 - [Definições Importantes](#Definições-Importantes)
 - [Montando na sua máquina](#Montando-na-sua-Máquina)
 - [Observações](#Observações)
@@ -34,15 +34,15 @@ Neste projeto iremos criar um script onde será provisionado um servidor web aut
 ------
 # Organização do repositório
 
-## iac_server_basic
+## basic
 
-Script que seguirá estritamente aquilo que foi proposto pelo desafio, criando somente as pastas, usuários e grupos descritos nos requerimentos. 
+Script que seguirá estritamente aquilo que foi proposto pelo desafio, criando o servidor e usando o site do instrutor como referência.
 
 Dentro da respectiva pasta há um outro README.md que explica detalhadamente o que o script faz.
 
-## iac_server_advanced
+## advanced
 
-Script avançado, que utiliza lógica para permitir a generalização do script básico, permitindo que seja criado quaisquer pastas, usuários e grupos direto na linha de comando de maneira muito mais simplificada. 
+Script avançado, que utiliza lógica para permitir a generalização do script básico, permitindo que qualquer ação seja opcional e que que o site possa ser baixado de qualquer repositório no github. 
 
 Nessa pasta está contida o script avançado, que utiliza lógica para permitir a generalização do script básico para qualquer caso semelhante.
 
@@ -108,7 +108,7 @@ Para utilizar os scripts na sua própria máquina, você pode fazer o seguinte:
 6 - Pronto, os scripts estão aptos a serem excutados. Escolha se quer executar o básico ou avançado, entre na pasta e execute o respectivo script. Por exemplo:
 
     > cd project_iac2-main
-    > cd iac_server_basic
+    > cd basic
     > ./new_iac_server_basic.sh
     
 
