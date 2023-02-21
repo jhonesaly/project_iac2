@@ -23,7 +23,7 @@ Neste projeto iremos criar um script onde será provisionado um servidor web aut
 
 ## Requerimentos do Projeto
 
-- Restaurar o snapshot criado anteriormente no virtualbox;
+- Restaurar o snapshot criado anteriormente no virtual box;
 - Atualizar o servidor;
 - Instalar o apache2;
 - Instalar o unzip;
@@ -77,7 +77,7 @@ Leia as observações (próxima seção) antes de seguir com a montagem.
 
 Para utilizar os scripts na sua própria máquina, você pode fazer o seguinte:
 
-0 - Logue como super usuário, isso facilitará o processo da criação da infraestrutura. Ao encerrar, deslogue do root por questões de segurança.
+0 - Logue como super usuário, isso facilitará o processo da criação da infraestrutura. Ao encerrar, saia do usuário root por questões de segurança.
 
     > su
     > Password:
@@ -105,7 +105,7 @@ Para utilizar os scripts na sua própria máquina, você pode fazer o seguinte:
 
     > chmod -R 771 project_iac2-main
 
-6 - Pronto, os scripts estão aptos a serem excutados. Escolha se quer executar o básico ou avançado, entre na pasta e execute o respectivo script. Por exemplo:
+6 - Pronto, os scripts estão aptos a serem executados. Escolha se quer executar o básico ou avançado, entre na pasta e execute o respectivo script. Por exemplo:
 
     > cd project_iac2-main
     > cd basic
@@ -115,7 +115,7 @@ Para utilizar os scripts na sua própria máquina, você pode fazer o seguinte:
 ------
 # Observações
 
-- O tutorial de montagem leva em consideração que também está sendo utilizada uma máquina linux
+- O tutorial de montagem leva em consideração que também está sendo utilizada uma máquina Linux
 - Os scripts não foram testados em todas as distribuições Linux existentes. Recomenda-se teste em um ambiente controlado antes de utilizá-lo em produção.
 - A ideia é que o script permita que uma pessoa leiga em programação consiga criar a infraestrutura sem abrir o código, mas mesmo o script básico pode ser utilizado por um programador para criar diretamente aquilo que deseja alterando os parâmetros no código.
 
