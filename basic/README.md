@@ -1,4 +1,4 @@
-# iac_server_basic
+# Projeto básico
 
 Nessa pasta está contida o script que seguirá estritamente aquilo que foi proposto pelo desafio, criando somente as pastas, usuários e grupos descritos nos requerimentos.
 
@@ -8,7 +8,7 @@ O script "new_iac2_basic.sh" é um script de automação de infraestrutura que a
 
 ------
 
-## Explicando Script new_iac2_basic
+## Explicando Script "new_iac2_basic.sh"
 
 Em 0, o script começa com saudações e instruções para o usuário.
 
