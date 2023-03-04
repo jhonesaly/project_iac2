@@ -9,7 +9,8 @@ Para tal, basta executar o script "new_iac_server_advanced.sh".
 O script "new_iac_server_advanced.sh" é responsável por conduzir o usuário por um conjunto de perguntas iniciais que ajudarão a configurar o servidor.
 
 ------
-# Explicando Script new_iac_advanced
+
+## Explicando Script new_iac_advanced
 
 Em 1, ele entra em um loop while que faz uma série de perguntas ao usuário.
 
@@ -25,8 +26,7 @@ Em seguida, o script verifica se a resposta para a pergunta 2 foi "y". Se a resp
 
 Finalmente, o script informa ao usuário que a execução foi concluída.
 
-
-## Módulo update_server
+### Módulo update_server
 
 O código apresenta um módulo chamado "update_server.sh" que realiza a atualização do sistema operacional Ubuntu Server. 
 
@@ -45,7 +45,7 @@ Em seguida, são executados os seguintes comandos:
 
 Dessa forma, o módulo "update_server" mantém o sistema operacional Ubuntu Server atualizado e limpo, garantindo maior segurança e estabilidade para o servidor.
 
-## Módulo web_server
+### Módulo web_server
 
 O código apresenta um módulo chamado "web_server.sh" que é responsável por configurar e baixar os arquivos de uma aplicação web em um servidor Apache.
 
