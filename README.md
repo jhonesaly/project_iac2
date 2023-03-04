@@ -4,8 +4,8 @@
 
 - [Resumo do Projeto](#resumo-do-projeto)
 - [Organização do Repositório](#organização-do-repositório)
-    - [basic](#basic)
-    - [advanced](#advanced)
+  - [basic](#basic)
+  - [advanced](#advanced)
 - [Definições Importantes](#definições-importantes)
 - [Montando na sua máquina](#montando-na-sua-máquina)
 - [Observações](#observações)

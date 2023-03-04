@@ -1,14 +1,14 @@
 # iac_server_basic
 
-Nessa pasta está contida o script que seguirá estritamente aquilo que foi proposto pelo desafio, criando somente as pastas, usuários e grupos descritos nos requerimentos. 
+Nessa pasta está contida o script que seguirá estritamente aquilo que foi proposto pelo desafio, criando somente as pastas, usuários e grupos descritos nos requerimentos.
 
 Para tal, basta executar o script "new_iac_basic.sh".
 
-O script "new_iac_server_basic.sh" é um script de automação de infraestrutura que atualiza o servidor, instala softwares necessários, baixa e copia os arquivos da aplicação para o servidor. O script pode ser utilizado em um ambiente de desenvolvimento ou produção para automatizar o processo de configuração do servidor.
+O script "new_iac2_basic.sh" é um script de automação de infraestrutura que atualiza o servidor, instala softwares necessários, baixa e copia os arquivos da aplicação para o servidor. O script pode ser utilizado em um ambiente de desenvolvimento ou produção para automatizar o processo de configuração do servidor.
 
 ------
 
-## Explicando Script new_iac_server_basic
+## Explicando Script new_iac2_basic
 
 Em 0, o script começa com saudações e instruções para o usuário.
 
