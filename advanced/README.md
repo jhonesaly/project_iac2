@@ -26,7 +26,7 @@ Em seguida, o script verifica se a resposta para a pergunta 2 foi "y". Se a resp
 
 Finalmente, o script informa ao usuário que a execução foi concluída.
 
-### Módulo update_server
+### **Módulo "update_server.sh"**
 
 O código apresenta um módulo chamado "update_server.sh" que realiza a atualização do sistema operacional Ubuntu Server. 
 
@@ -45,7 +45,7 @@ Em seguida, são executados os seguintes comandos:
 
 Dessa forma, o módulo "update_server" mantém o sistema operacional Ubuntu Server atualizado e limpo, garantindo maior segurança e estabilidade para o servidor.
 
-### Módulo web_server
+### **Módulo "web_server.sh"**
 
 O código apresenta um módulo chamado "web_server.sh" que é responsável por configurar e baixar os arquivos de uma aplicação web em um servidor Apache.
 
